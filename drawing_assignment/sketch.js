@@ -12,7 +12,7 @@ function setup() {
 
 function draw() {
   fill(255);
-  text('Press the Q, W, E, R, T, or U key to change BG Color', 275, 25);
+  text('Press the Q, W, E, R, T, Y, U, I, O, P key to change BG Color', 275, 25);
   fill(110, 200, 150);
   rect(x, y, 50, 50);
   line(x, y, 640, 640);
@@ -78,6 +78,18 @@ function keyPressed()
   if(key == 'I' || key == 'i')
   {
     c = color(35, 50, 70);
+  }
+
+  // O key
+  if(key == 'O' || key == 'o')
+  {
+    c = color(64, 21, 222);
+  }
+  
+  // P key
+  if(key == 'P' || key == 'p')
+  {
+    c = color(12, 110, 9);
   }
   
   background(c);
