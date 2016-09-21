@@ -12,14 +12,14 @@ function setup() {
 
 function draw() {
   fill(255);
-  text('Press the Q, W, E, R, or T key to change BG Color', 275, 25);
+  text('Press the Q, W, E, R, T, or U key to change BG Color', 275, 25);
   fill(110, 200, 150);
   rect(x, y, 50, 50);
-  line(x, y, 0, 0);
+  line(x, y, 640, 640);
   var dx = mouseX-x;
   var dy = mouseY-y;
-  x = x + random(0, 0.5)*dx + random(-10, 10);
-  y = y + random(0, 0.5)*dy + random(-10, 10);
+  x = x + random(0, 0.5)*dx + random(-20, 20);
+  y = y + random(0, 0.5)*dy + random(-20, 20);
   if(x>width) x = 0;
   if(y>height) y = 0;
   if(x<0) x=width;
@@ -72,6 +72,12 @@ function keyPressed()
   if(key == 'U' || key == 'u')
   {
     c = color(15, 80, 170);
+  }
+  
+  // I key
+  if(key == 'I' || key == 'i')
+  {
+    c = color(35, 50, 70);
   }
   
   background(c);
